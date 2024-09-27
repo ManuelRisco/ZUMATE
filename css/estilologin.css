@@ -28,5 +28,40 @@ footer{
     bottom: auto;
     margin-top: auto;
 }
+.social-button {
+    display: inline-flex;
+    align-items: center;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+#copyNotification {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #d4edda; /* Color de fondo verde claro */
+    color: #155724; /* Texto verde oscuro */
+    border: 1px solid #c3e6cb; /* Borde verde */
+    display: none; /* Oculto por defecto */
+    transition: opacity 0.5s ease;
+}
+
+
+#copyMessage {
+    color: green; /* Color del mensaje de confirmación */
+    font-weight: bold;
+}
+.social-button:hover {
+    opacity: 0.8;
+}
+
+.modal-body {
+    background-color: #f8f9fa; /* Color de fondo para la modal */
+}
 
 
