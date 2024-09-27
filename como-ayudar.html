@@ -52,7 +52,33 @@
     justify-content: center;
     margin: 20px 0; /* Espaciado superior e inferior */
 }
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2rem; /* Reducir el tamaño del título en pantallas pequeñas */
+    }
+    .section-title {
+        font-size: 2rem; /* Ajustar tamaño de fuente para título de sección */
+    }
+    .card-title {
+        font-size: 1.5rem; /* Ajustar tamaño de fuente para títulos de tarjetas */
+    }
+}
 
+/* Espaciado estándar para todas las tarjetas */
+.card {
+    margin-bottom: 20px; /* Espacio entre las tarjetas */
+}
+
+/* Aumentar espacio entre tarjetas en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 30px; /* Aumentar el margen inferior en pantallas pequeñas */
+    }
+
+    .row {
+        gap: 15px; /* Agregar separación adicional entre columnas en pantallas pequeñas */
+    }
+}   
 .social-icon {
     margin: 0 10px; /* Aumentar el espaciado entre iconos */
 }
@@ -76,26 +102,59 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-md bg-body-tertiary fixed-top">
         <div class="container">
+            <!--Logo-->
             <a href="ZUMATE.html">
                 <img src="images/logo.png" alt="logo zumate" height="70">
             </a>
-            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <!--Boton responsive-->
+            <button class="navbar-toggler shadow-none border-0" 
+                    type="button" 
+                    data-bs-toggle="offcanvas" 
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <!--Barra lateral-->
+            <div class="sidebar offcanvas offcanvas-start" 
+                tabindex="-1" 
+                id="offcanvasNavbar" 
+                aria-labelledby="offcanvasNavbarLabel"
+            >
+
+                <!--Cabecera barra lateral-->
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h5 class="offcanvas-title" 
+                    id="offcanvasNavbarLabel">Menú</h5>
+
+                    <button 
+                        type="button" 
+                        class="btn-close" 
+                        data-bs-dismiss="offcanvas" 
+                        aria-label="Close"
+                    ></button>
+
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="ZUMATE.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Sobre Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Programa</a></li>
-                        <li class="nav-item"><a class="nav-link" href="como-ayudar.html">¿Como ayudar?</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="ZUMATE.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Programa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="como-ayudar.html">¿Como ayudar?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -262,11 +321,9 @@
             });
         }
     </script>
-    
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="scripts/navbar.js"></script>
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="scripts/navbar.js"></script>
 </body>
 </html>
